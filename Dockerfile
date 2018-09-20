@@ -5,7 +5,7 @@ RUN apk --no-cache add maven curl tar gzip
 #
 # Install JDK
 #
-RUN curl https://download.java.net/java/early_access/alpine/28/binaries/openjdk-11+28_linux-x64-musl_bin.tar.gz -o jdk.tar.gz
+ADD "https://download.java.net/java/early_access/alpine/28/binaries/openjdk-11+28_linux-x64-musl_bin.tar.gz" /jdk.tar.gz
 RUN mkdir -p /opt/jdk
 RUN tar xzf /jdk.tar.gz --strip-components=1 -C /opt/jdk
 ENV PATH=/opt/jdk/bin:$PATH
