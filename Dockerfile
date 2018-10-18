@@ -11,7 +11,7 @@ RUN cat server/pom.xml | /clone_snapshots.sh && for i in $(ls -d */ | cut -f1 -d
 WORKDIR /lds/server
 RUN mvn -B verify dependency:go-offline
 COPY src /lds/server/src/
-RUN mvn -B -o verify && mvn -B -o dependency:copy-dependencies
+RUN mvn -B verify && mvn -B dependency:copy-dependencies
 
 #
 # Build LDS image
