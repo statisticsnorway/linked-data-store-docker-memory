@@ -66,7 +66,7 @@
         <dependency>
             <groupId>no.ssb.lds</groupId>
             <artifactId>linked-data-store-search-provider-solr</artifactId>
-            <version>0.1</version>
+            <version>0.2-SNAPSHOT</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
