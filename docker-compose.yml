@@ -9,8 +9,28 @@ services:
     volumes:
     - ldsmemoryconf:/conf:ro
     - ldsmemoryschemas:/schemas:ro
+    environment:
+      - LDS_namespace.default=data
+      - LDS_persistence.fragment.capacity=8192
+      - LDS_graphql.search.enabled=true
+      - LDS_search.index.provider=solr
+      - LDS_search.index.url=http://index:8983/solr/lds_index
+    depends_on:
+    - index
+
+  index:
+    image: solr
+    ports:
+     - "8983:8983"
+    volumes:
+      - solrdata:/opt/solr/server/solr/mycores
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - lds_index
 
 volumes:
+  solrdata:
   ldsmemoryconf:
     driver: local
     driver_opts:
