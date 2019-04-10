@@ -15,11 +15,11 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: ${CONF_FOLDER}
+      device: ${PWD}/conf
       o: bind
   ldsmemoryschemas:
     driver: local
     driver_opts:
       type: none
-      device: ${SCHEMA_FOLDER}
+      device: ${PWD}/schemas
       o: bind
