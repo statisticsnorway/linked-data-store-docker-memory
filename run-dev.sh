@@ -11,9 +11,4 @@ else
   echo "Reusing existing volumes and data"
 fi
 
-ENV_FILE='docker-compose.env'
-if [ -f $ENV_FILE ]; then
-    export $(grep -v '^#' $ENV_FILE | envsubst | xargs -0)
-fi
-
 docker-compose up --remove-orphans
