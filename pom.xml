@@ -61,7 +61,7 @@
         <dependency>
             <groupId>no.ssb.lds</groupId>
             <artifactId>linked-data-store-core</artifactId>
-            <version>0.11</version>
+            <version>0.12-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>no.ssb.lds</groupId>
@@ -72,7 +72,7 @@
         <dependency>
             <groupId>no.ssb.lds</groupId>
             <artifactId>linked-data-store-persistence-provider-memory</artifactId>
-            <version>0.7</version>
+            <version>0.8-SNAPSHOT</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
